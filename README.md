@@ -1,2 +1,3 @@
 # React_Assignment
-Created with CodeSandbox
+Sample webpage implementing cards, know more button and search filters
+
