@@ -2,20 +2,21 @@ import React, { useState } from "react";
 
 //import button from "./button";
 
-function Card(props) {
+function Card({ item }) {
   const [showDescription, setShowDescription] = useState(false);
   function updateCard() {
     setShowDescription(() => !showDescription);
   }
+  //console.log("Rendering Card : ", item);
   return (
     <div className="item">
-      <h1>{props.name}</h1>
-      <img src={props.imgURL} alt="Helmet" />
+      <h1>{item.name}</h1>
+      <img src={item.imgURL} alt="Helmet" />
 
-      <p> Price: {props.price}</p>
-      <p> Brand: {props.brand}</p>
-      <p> Type: {props.type}</p>
-      {showDescription && <p>{props.description}</p>}
+      <p> Price: {item.price}</p>
+      <p> Brand: {item.brand}</p>
+      <p> Type: {item.type}</p>
+      {showDescription && <p>{item.description}</p>}
       <button onClick={updateCard}>
         {showDescription ? "Show Less" : "Know More"}
       </button>
