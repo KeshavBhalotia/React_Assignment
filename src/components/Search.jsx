@@ -1,20 +1,7 @@
 import React, { useState } from "react";
 import accessories from "./accessories";
 import Card from "./Card";
-
-function createCard(currentAccessory) {
-  return (
-    <Card
-      key={currentAccessory.id}
-      imgURL={currentAccessory.imgURL}
-      name={currentAccessory.name}
-      price={currentAccessory.price}
-      brand={currentAccessory.brand}
-      type={currentAccessory.type}
-      description={currentAccessory.description}
-    />
-  );
-}
+import createCard from "./createCard";
 
 //function updateSearch(curr) {}
 
@@ -36,7 +23,7 @@ function Search() {
     <div className="container">
       <input type="text" placeholder="Search here...." onChange={getData} />
       {filteredData.map(createCard)}
-      {/* {accessories.map(createCard)} */}
+      {/* {accessories.filter(createCard)} */}
     </div>
   );
 }
